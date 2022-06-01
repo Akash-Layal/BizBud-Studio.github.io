@@ -39,10 +39,8 @@ Preloading Screen
   transition: 0.5s ease-in-out;
 }
 
-::selection{
-  background-color: rgba(254, 254, 254, 0.5) ;
-  
-
+::selection {
+  background-color: rgba(254, 254, 254, 0.5);
 }
 /**************************
                               
@@ -1114,16 +1112,32 @@ Media-Query Styling
     transition: all 150ms ease-in-out;
   }
 }
+@media (min-width: 1050px) {
+  .nine {
+    display: none;
+  }
+}
 
+@media (max-width: 1050px) {
+  .nine,
+  .eight {
+    display: none;
+  }
+}
 @media (max-width: 1000px) {
   html {
     font-size: 85%;
+  }
+  .eight,
+  .nine {
+    display: none;
   }
 }
 @media (max-width: 900px) {
   html {
     font-size: 80%;
   }
+
   .above-copy {
     display: grid;
     grid-template-columns: 20% 1fr 1fr;
@@ -1249,6 +1263,9 @@ Media-Query Styling
     right: 0;
     clip-path: circle(47% at right bottom);
   }
+  .seven {
+    display: none;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1279,6 +1296,10 @@ Media-Query Styling
     right: 0;
     clip-path: circle(40% at right bottom);
   }
+
+  .six {
+    display: none;
+  }
 }
 
 @media (max-width: 550px) {
@@ -1286,6 +1307,9 @@ Media-Query Styling
       display: none;
   }*/
 
+  .five {
+    display: none;
+  }
   .poly {
     position: absolute;
     right: 0;
@@ -1315,13 +1339,14 @@ Media-Query Styling
     display: block;
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 65px;
     gap: 0;
 
     background-color: rgb(26, 26, 28);
     width: 100vw;
     text-align: center;
-    transition: 0.3s;
+
+    transition: all 0.3s;
   }
 
   .nav-list {
@@ -1426,6 +1451,14 @@ Media-Query Styling
 }
 
 @media (max-width: 400px) {
+  hr.five,
+  .six,
+  .seven,
+  .eight,
+  .nine {
+    display: none;
+    overflow-x: hidden;
+  }
   .container {
     padding: 0.5rem;
     margin-top: 2rem;
@@ -1441,6 +1474,11 @@ Media-Query Styling
 }
 
 @media (max-width: 350px) {
+  html,
+  main,
+  .container {
+    overflow-x: hidden;
+  }
   .poly {
     position: absolute;
     right: 0;
@@ -1452,6 +1490,11 @@ Media-Query Styling
 }
 
 @media (max-width: 325px) {
+  html,
+  main,
+  .container {
+    overflow-x: hidden;
+  }
   .poly {
     position: absolute;
     right: 0;
@@ -1462,6 +1505,14 @@ Media-Query Styling
   }
 
   @media (max-width: 300px) {
+    html,
+    main,
+    .container {
+      overflow-x: hidden;
+    }
+    .four {
+      display: none;
+    }
     .poly {
       position: absolute;
       right: 0;
@@ -1472,7 +1523,15 @@ Media-Query Styling
     }
   }
 }
-@media (max-width: 200px) {
+@media (max-width: 240px) {
+  html,
+  main,
+  .container {
+    overflow-x: hidden;
+  }
+  .three {
+    display: none;
+  }
   .poly {
     display: none;
   }
